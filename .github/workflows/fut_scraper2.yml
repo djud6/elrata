@@ -1,16 +1,10 @@
-name: FUT Scraper Automation
+name: FUT Scraper Automation2
 
 on:
   schedule:
     - cron: '0 * * * *'  
   workflow_dispatch:    
 
-env:
-  DB_HOST: ${{ secrets.DB_HOST }}
-  DB_USER: ${{ secrets.DB_USER }}
-  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-  DB_NAME: ${{ secrets.DB_NAME }}
-  DB_PORT: ${{ secrets.DB_PORT }}
         
 jobs:
   run-scraper:
@@ -31,4 +25,4 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run Database Scraper
-      run: python futdb_aws.py
+      run: python futdb_aws2.py
